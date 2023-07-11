@@ -1,12 +1,14 @@
 import express, { json } from 'express';
 import { Client } from 'discord.js';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
 
 const app = express();
 app.use(cors());
 app.use(json());
 
-require('dotenv').config();
+dotenv.config()
 
 const client = new Client();
 const token =  process.env.TOKEN; 
